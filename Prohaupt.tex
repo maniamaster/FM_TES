@@ -18,6 +18,35 @@
 %% einbinden einiger nützlicher Befehle
 \input{Vorlage/shortcuts}
 
+%Zur Formatierung in der Matheumgebung
+\renewcommand{\t}{\ensuremath{\rm\tiny}} % Tiefgestellter Text in der Matheumgebung wird schoener mit: $\Phi_{\t{Text}}$
+\renewcommand{\d}{\ensuremath{\mathrm{d}}} % Die totale Ableitung ist stets aufrecht zu setzen: \d
+\newcommand{\diff}[3][]{\ensuremath{\frac{\d^{#1}#2}{\d#3^{#1}}}} % einfache Ableitung nach x: $\ddx{\Phi}$
+\newcommand{\pdiff}[3][]{\ensuremath{\frac{\partial^{#1}#2}{\partial#3^{#1}}}} % wie gesprochen, eine partielle Ableitung: \del
+\newcommand{\aeqiv}{\ensuremath{\qquad \Longleftrightarrow \qquad}} % Eine Aequivalenz
+\newcommand{\folgt}{\ensuremath{\qquad \Longrightarrow \qquad}} % Ein Folgepfeil mit Abstaenden
+\newcommand{\corresponds}{\ensuremath{\mathrel{\widehat{=}}}} % Befehl für "Entspricht"-Zeichen
+\newcommand{\mi}[1]{\ensuremath{\mathit{#1}}} % italics für griechische Buchstaben in Matheumgebung
+
+%Um nicht so viel schreiben zu müssen...
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\wtilde}[1]{\widetilde{#1}}
+\newcommand{\mrm}[1]{\mathrm{#1}}
+\newcommand{\mbf}[1]{\mathbf{#1}}
+\newcommand{\mbb}[1]{\mathbb{#1}}
+\newcommand{\mcal}[1]{\mathcal{#1}}
+\newcommand{\mfrak}[1]{\mathfrak{#1}}
+
+%Abkürzungen
+\newcommand{\zB}{z.\,B.\ }
+\newcommand{\bzw}{b.\,z.\, w.\ }
+\newcommand{\Dh}{d.\,h.\ }
+\newcommand{\Gl}{Gl.\ }
+\newcommand{\Abb}{Abb.\ }
+\newcommand{\Tab}{Tab.\ }
+
+
 \begin{document}
 \LabratoryName{FM.TES}{Tunneleffekt bei Supraleitern}
 \ProtocolAuthor{Eric}{Bertok}{eric.bertok@stud.uni-goettingen.de}
@@ -47,7 +76,47 @@
 \section{Theorie}
 \label{sec:theorie}
 \subsection{Grundlagen: Zustandsdichte, Fermiverteilung, Besetzungsdichte}
+Die Zustandsdichte $D(E)$ gibt die Anzahl der erlaubten Mikrozustände pro
+Energieintervall $\d E$ an. Sie ist für kontinuierliche Energien allgemein
+definiert durch $D(E):=\int \frac{\d^d k}{(2 \pi)^d}\delta(E-E(\vec{k})$ [cit],
+wobei $\vec k$ die Wellenzahl und $d$ die Dimension (für unseren Fall 3) ist.
+$E(\vec k)$ ist die Dispersionsrelation der Teilchen.
+Für freie Elektronen ergibt sich [cit]:
+\begin{equation}
+    D(E)=\frac{\left(2m^*\right)^\frac{3}{2}}{2\pi ^2\hbar ^3}\sqrt{E}, 
+\end{equation}
+wobei $m^*$ die sog. effektive Masse der Elektronen ist. Diese ist für freie
+Elektronen gleich ihrer tatsächlichen Masse, berücksichtigt bei einem
+Festkörper aber zusätzlich den Einfluss des Kristallpotentials.
+
+Die Fermi-Dirac Verteilung gibt die mittlere thermische Energiebesetzung von Spin-1/2
+Teilchen in Abhängigkeit der Temperatur $T$ und des chemischen Potentials $\mu$
+an. Sie lautet $f_T(E)=\frac{1}{\exp{\beta(E-\mu)-1}}$, wobei
+$\beta=\frac{1}{k_b T}$ der Boltzmann- Faktor ist. Für $T=0$ ist sie eine
+Stufenfunktion [pic]: Unterhalb der sog. Fermienergie $E_F=\mu$ sind alle
+Zustände mit Wahrscheinlichkeit 1 besetzt, während alle oberhalb von $E_F$
+unbesetzt sind. Dies bezeichnet man als ``Fermikante''.
+
+Die Besetzungsdichte, also die Dichte der tatsächlich besetzten Zustände pro
+Energieintervall erhält man als
+Produkt aus Zustandsdichte und Fermiverteilung: $n(E)=D(E)f_T(E)$. Hierdurch
+erreicht man eine Trennung der systemabhängigen Größen in $D(E)$ und der
+Systemunabhängigen Thermodynamik in $f_T(E)$.
+
 \subsection{Tunneleffekt}
+Der Tunneleffekt ist ein quantenmechanischer Effekt, bei dem ein Teilchen eine
+Potentialbarriere endlicher Höhe und breite durchqueren kann, obwohl sie höher
+als die Energie des Teilchens ist. Dies kommt dadurch zustande, dass die
+Wellenfunktion jenseits der Barriere verschieden von Null ist. 
+Durch Lösen der Schrödingergleichung mit einer Kastenbarriere erhält man,
+dass die Tunnelwahrscheinlichkeit exponentiell mit der Breite $d$ der Barriere
+abfällt: [cit]
+\begin{equation}
+    A_\text{tunnel}\propto e^{-\sqrt{(2m/\hbar^2 (V_0-E)}}e^{-d}.
+\end{equation}
+Jenseits der Barriere das Potential wieder Null. Somit ist die Wellenlänge und damit die Energie des getunnelten
+Teilchens unverändert. Lediglich die Wahrscheinlichkeit des Tunnelns nimmt ab.
+
 \subsection{mikroskopische Theorie der Supraleitung: Cooper- Paare}
 \subsection{Zustandsdichte und Kennlinien von Supraleitern}
 \subsubsection{NL/NL Tunnelkennlinie}
