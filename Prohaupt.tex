@@ -78,11 +78,13 @@
 \subsection{Grundlagen: Zustandsdichte, Fermiverteilung, Besetzungsdichte}
 Die Zustandsdichte $D(E)$ gibt die Anzahl der erlaubten Mikrozustände pro
 Energieintervall $\d E$ an. Sie ist für kontinuierliche Energien allgemein
-definiert durch $D(E):=\int \frac{\d^d k}{(2 \pi)^d}\delta(E-E(\vec{k})$ [cit],
+definiert durch $D(E):=\int \frac{\d^d k}{(2
+\pi)^d}\delta\left(E-E(\vec{k})\right)$ [cit],
 wobei $\vec k$ die Wellenzahl und $d$ die Dimension (für unseren Fall 3) ist.
 $E(\vec k)$ ist die Dispersionsrelation der Teilchen.
 Für freie Elektronen ergibt sich [cit]:
 \begin{equation}
+    \label{eq:freielek}
     D(E)=\frac{\left(2m^*\right)^\frac{3}{2}}{2\pi ^2\hbar ^3}\sqrt{E}, 
 \end{equation}
 wobei $m^*$ die sog. effektive Masse der Elektronen ist. Diese ist für freie
@@ -101,7 +103,7 @@ Die Besetzungsdichte, also die Dichte der tatsächlich besetzten Zustände pro
 Energieintervall erhält man als
 Produkt aus Zustandsdichte und Fermiverteilung: $n(E)=D(E)f_T(E)$. Hierdurch
 erreicht man eine Trennung der systemabhängigen Größen in $D(E)$ und der
-Systemunabhängigen Thermodynamik in $f_T(E)$.
+systemunabhängigen Thermodynamik in $f_T(E)$.
 
 \subsection{Tunneleffekt}
 Der Tunneleffekt ist ein quantenmechanischer Effekt, bei dem ein Teilchen eine
@@ -111,13 +113,61 @@ Wellenfunktion jenseits der Barriere verschieden von Null ist.
 Durch Lösen der Schrödingergleichung mit einer Kastenbarriere erhält man,
 dass die Tunnelwahrscheinlichkeit exponentiell mit der Breite $d$ der Barriere
 abfällt: [cit]
-\begin{equation}
+\begin{align}
+    \label{eq:tunnelamp}
     A_\text{tunnel}\propto e^{-\sqrt{(2m/\hbar^2 (V_0-E)}}e^{-d}.
-\end{equation}
+\end{align}
 Jenseits der Barriere das Potential wieder Null. Somit ist die Wellenlänge und damit die Energie des getunnelten
 Teilchens unverändert. Lediglich die Wahrscheinlichkeit des Tunnelns nimmt ab.
+In unserem Versuch, in dem ein Aluminium- Aluminiumoxid- Blei- Kontakt
+verwendet wird, ist die Potentialbreite durch die Dicke der
+Aluminiumoxidschicht gegeben. Die Höhe des Potentialwalls ist gegeben durch die
+Differenz der Fermienergien der beiden Leiter Al und Pb und der des
+Aluminiumoxids.
+Weiterhin ist zu beachten, dass ein Teilchen nur dann durch die Barriere
+tunneln kann, wenn es auf der anderen Seite freie Zustände vorfindet. Ist dies
+nicht der Fall, kommt es zur exponentiellen Abnahme der Amplitude. Auf diese
+Weise kann man Schlüsse über die Zustandsdichte der betrachteten Materialien
+ziehen, was in diesem Versuch benutzt wird, um die Energielücke von
+Supraleitern zu vermessen.
 
 \subsection{mikroskopische Theorie der Supraleitung: Cooper- Paare}
+Die BCS Theorie, welche 1957 von Badeen, Cooper und Schrieffer entwickelt
+wurde, war die erste erfolgreiche mikroskopische Theorie der Supraleitung
+\cite[Kap.\;2]{buckel2013supraleitung}. Die positiven Atomrümpfe werden durch die
+negativ geladenen Elektronen polarisiert. Da die Atomrümpfe vergleichsweise
+schwer sind, haben sie eine geringe Schwingungsfrequenz. Dadurch kommt es zu
+einer retardierten Polarisierung. Ein anderes Elektron spürt diese
+Polarisierung also, wenn das erste bereits eine große Distanz zurückgelegt hat.
+Aufgrund dessen kann man die Coulombabstoßung zwischen diesen beiden Elektronen
+vernachlässigen. Mathematisch lässt sich diese anziehende Wechselwirkung
+zwischen zwei Elektronen als ein Austausch eines virtuellen Phonons
+beschreiben. Für eine detaillierte Ausarbeitung im Formalismus der zweiten
+Quantisierung siehe \zB \cite[Kap.\;10.4]{enss2011tieftemperaturphysik}.
+Wenn $\vec q$ der Impuls des Phonons und $\vec k_1$, $\vec k_2$ die der beiden Elektronen
+sind, so gilt nach dem Austausch des Phonons
+\cite[S.\;308]{enss2011tieftemperaturphysik}
+\begin{align}
+    \label{eq:phononimp}
+    \vec k_1'=\vec k_1 +\vec q, \quad \vec k_2'=\vec k_2 -\vec q,
+\end{align}
+der Gesamtimpuls $\vec K=\vec k_1 + \vec k_2$ bleibt also erhalten.
+Aufgrund der Fermiverteilung sind für die Elektronen nur Energien oberhalb der
+Fermikante zugänglich. Approximiert man die Phononenfrequenz mit der
+Debyefrequenz $\omega_D$ [cit], so liegen die freien Zustände innerhalb der
+Energieschale $[E_F,E_F+\hbar \omega_D]$ oder äquivalent im k-Raum innerhalb
+der Schale mit Dicke $\frac{m\omega_D}{\hbar k_F}$, wobei $k_F$ der
+Fermiwellenvektor ist. Für beide Elektronen sind diese Schalen in Abb.
+\ref{fig:schale} zu sehen. Impulserhaltung ist erfüllt für alle Vektoren im
+Überlapp beider Schalen. Dieser ist maximal für $\vec k_1 = -\vec k_2$. Das
+Fermi Prinzip verlangt außerdem, dass beide Elektronen entgegengesetzten Spin
+besitzen. Das Paar ${\vec k,\uparrow},{-\vec k,\downarrow}$ bezeichnet mnan als
+Cooper-Paar (CP). Cooper-Paare sind effektive Bosonen. Durch die Attraktion von
+Elektronenpaaren wird die Gesamtenergie verringert. Es kommt zu einer
+makroskopischen Besetzung, bei der im Grundzustand alle Cooper-Paare im exakt gleichen
+Quantenzustand sind \cite[Kap. 2.2]{buckel2013supraleitung}. Die Gesamtheit
+aller Cooper-Paare wird deswegen als eine makroskopische Wellenfunktion
+beschrieben.
 \subsection{Zustandsdichte und Kennlinien von Supraleitern}
 \subsubsection{NL/NL Tunnelkennlinie}
 \subsubsection{NL/SL Tunnelkennlinie}
@@ -143,7 +193,7 @@ Teilchens unverändert. Lediglich die Wahrscheinlichkeit des Tunnelns nimmt ab.
 % nicht unbedingt erforderlich
 %\listoftables
 
-\bibliography{lit}
+\bibliography{literatur}
 
 \end{document}
 
