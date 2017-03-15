@@ -85,7 +85,7 @@ $E(\vec k)$ ist die Dispersionsrelation der Teilchen.
 Für freie Elektronen ergibt sich [cit]:
 \begin{equation}
     \label{eq:freielek}
-    D(E)=\frac{\left(2m^*\right)^\frac{3}{2}}{2\pi ^2\hbar ^3}\sqrt{E}, 
+   D_N(E_{\vec{k}})=\frac{\left(2m^*\right)^\frac{3}{2}}{2\pi ^2\hbar ^3}\sqrt{E}, 
 \end{equation}
 wobei $m^*$ die sog. effektive Masse der Elektronen ist. Diese ist für freie
 Elektronen gleich ihrer tatsächlichen Masse, berücksichtigt bei einem
@@ -168,7 +168,34 @@ makroskopischen Besetzung, bei der im Grundzustand alle Cooper-Paare im exakt gl
 Quantenzustand sind \cite[Kap. 2.2]{buckel2013supraleitung}. Die Gesamtheit
 aller Cooper-Paare wird deswegen als eine makroskopische Wellenfunktion
 beschrieben.
-\subsection{Zustandsdichte und Kennlinien von Supraleitern}
+\subsection{Grundzustand und Quasiteilchenanregungen}
+Der im voherigen Abschnitt beschriebene makroskopische Zustand aus
+Cooper-Paaren bildet aufgrund der attraktiven Wechselwirkung den neuen
+Grundzustand. Möchte man den Supraleiter in einen angeregten Energiezustand
+bringen, so muss man zuerst eine Energie $\Delta$ aufbringen, um ein CP
+aufzubrechen. Anschließend muss das freie Elektron auf ein höheres
+Energieniveau gebracht werden, was wiederum eine Energie von $\Delta$ benötigt
+\cite{tidecks1990current}. $\Delta$ Ist die Energielücke des Supraleiters,
+welche hier gemessen werden soll. Die Elektronen, die bei der Aufbrechung eines CP's
+entstehen, sind keine freien Elektronen, sondern Anregungungen im
+Mehrelektronensystem, sogenannte Quasiteilchen. Mit Quasiteilchen können
+komplizierte Mehrteilchenphänomene als Einteilchenphänomene beschrieben werden.
+Aus der BCS-Theorie erhält man durch Aufstellen der freien Energie
+$F=E_\text{kin}+E_\text{pot}-TS$ und deren Minimierung Ausdrücke für die
+für die Anregungsenergie $E_{\vec{k}}$ der Quasiteilchenanregungen und für die
+Zustandsdichte von Supraleitern $D_S(E_{\vec{k}})$ in Abhängigkeit der Energielücke: \cite[Kap.\;10.4]{enss2011tieftemperaturphysik}:
+
+\begin{align}
+    \label{eq:BCS}
+    E_{\vec k}&=\sqrt{\eta_{\vec{k}}^2+\Delta^2}\\
+    D_S(E_{\vec{k}})&=D_N(E_{\vec{k}})\frac{E_{\vec k}}{\sqrt{E_{\vec
+    k}^2-\Delta^2}}.
+\end{align}
+$\eta_{\vec k}$ ist die kinetische Energie der Elektronen gemessen von der
+Fermienergie. Die Quasiteilchen verhalten sich je nach kinetischer Energie wie
+Löcher, Elektronen oder Mischzustände.
+
+\subsection{Kennlinien von Normalleitern und Supraleitern}
 \subsubsection{NL/NL Tunnelkennlinie}
 \subsubsection{NL/SL Tunnelkennlinie}
 \section{Durchführung}
