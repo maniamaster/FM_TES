@@ -132,6 +132,14 @@ ziehen, was in diesem Versuch benutzt wird, um die Energielücke von
 Supraleitern zu vermessen.
 
 \subsection{mikroskopische Theorie der Supraleitung: Cooper- Paare}
+\begin{figure}[]
+    \begin{center}
+        \includegraphics[scale=0.7]{fig/kreis.png}
+    \end{center}
+    \caption{eq: Impulsschalen im k-Raum. Impulserhaltung wird erfüllt für den
+    Überlapp der beiden Schalen \cite[S.\;309]{enss2011tieftemperaturphysik}.}
+    \label{fig:kreis}
+\end{figure}
 Die BCS Theorie, welche 1957 von Badeen, Cooper und Schrieffer entwickelt
 wurde, war die erste erfolgreiche mikroskopische Theorie der Supraleitung
 \cite[Kap.\;2]{buckel2013supraleitung}. Die positiven Atomrümpfe werden durch die
@@ -158,10 +166,10 @@ Debyefrequenz $\omega_D$ [cit], so liegen die freien Zustände innerhalb der
 Energieschale $[E_F,E_F+\hbar \omega_D]$ oder äquivalent im k-Raum innerhalb
 der Schale mit Dicke $\frac{m\omega_D}{\hbar k_F}$, wobei $k_F$ der
 Fermiwellenvektor ist. Für beide Elektronen sind diese Schalen in Abb.
-\ref{fig:schale} zu sehen. Impulserhaltung ist erfüllt für alle Vektoren im
+\ref{fig:kreis} zu sehen. Impulserhaltung ist erfüllt für alle Vektoren im
 Überlapp beider Schalen. Dieser ist maximal für $\vec k_1 = -\vec k_2$. Das
 Fermi Prinzip verlangt außerdem, dass beide Elektronen entgegengesetzten Spin
-besitzen. Das Paar ${\vec k,\uparrow},{-\vec k,\downarrow}$ bezeichnet mnan als
+besitzen. Das Paar ${\vec k,\uparrow},{-\vec k,\downarrow}$ bezeichnet man als
 Cooper-Paar (CP). Cooper-Paare sind effektive Bosonen. Durch die Attraktion von
 Elektronenpaaren wird die Gesamtenergie verringert. Es kommt zu einer
 makroskopischen Besetzung, bei der im Grundzustand alle Cooper-Paare im exakt gleichen
@@ -169,7 +177,7 @@ Quantenzustand sind \cite[Kap. 2.2]{buckel2013supraleitung}. Die Gesamtheit
 aller Cooper-Paare wird deswegen als eine makroskopische Wellenfunktion
 beschrieben.
 \subsection{Grundzustand und Quasiteilchenanregungen}
-Der im voherigen Abschnitt beschriebene makroskopische Zustand aus
+Der im vorherigen Abschnitt beschriebene makroskopische Zustand aus
 Cooper-Paaren bildet aufgrund der attraktiven Wechselwirkung den neuen
 Grundzustand. Möchte man den Supraleiter in einen angeregten Energiezustand
 bringen, so muss man zuerst eine Energie $\Delta$ aufbringen, um ein CP
@@ -198,9 +206,19 @@ der Cooper-Paare genug, um diese aufzubrechen und der Supraleiter geht in den
 normalleitenden Zustand ohne Energielücke über.
 
 \subsection{Tunnelkennlinien von Normalleitern und Supraleitern}
+\begin{figure}[]
+    \begin{center}
+        \includegraphics[width=\textwidth]{fig/tunnel.png}
+    \end{center}
+    \caption{Tunneleffekt zwischen zwei Normalleitern (a), zwischen einem
+    Normalleiter und einem Supraleiter bei $V=0$ (b) und zwischen einem
+    Normalleiter uns Supraleiter bei $U=U_c=\Delta/e$ \cite{dem}
+   .}
+    \label{fig:tunnel}
+\end{figure}
 Im Versuch werden sowohl ein Normalleiter-Normalleiter (NL/NL) und ein
 Normalleiter-Supraleiterkontakt (NL/SL) verwendet. Die Situation eines NL/NL
-Kontaktes ist in Abb \ref{fig:tunnel} (a) zu sehen. Die Zustandsdichte eines
+Kontaktes ist in Abb. \ref{fig:tunnel} (a) zu sehen. Die Zustandsdichte eines
 Normalleiters kann in der nähe der Fermienergie als konstant angenommen werden.
 Liegt keine Spannung an, so tunneln im Mittel gleich viele Elektronen von links
 nach rechts und umgekehrt. Der Strom ist null. Bei Anlegen einer Spannung
@@ -211,19 +229,27 @@ gemessenen Tunnelstrom, also Ohm'sches verhalten $U=RI$.
 Für einen NL/SL Kontakt liegt die Fermienergie des Normalleiters in der Mitte
 der Energielücke des Supraleiters. Somit kann kein Tunnelstrom fließen, da
 keine freien Zustände unterhalb $E_F$ vorhanden sind (\ref{fig:tunnel} (b) ). Erst bei einer Spannung
+\begin{figure}[]
+    \begin{center}
+        \includegraphics[scale=0.5]{fig/kennlinie.png}
+    \end{center}
+    \caption{Tunnelkennlinie eines NL/NL Kontaktes (a), eines NL/SL Kontaktes
+    bei $T=0$ (b) und eines NL/SL Kontaktes bei $0<T<T_c$ (c) \cite[S:\;72]{buckel2013supraleitung}.}
+    \label{fig:kennlinie}
+\end{figure}
 von $U=\Delta/e$ können Elektronen in den Supraleiter Tunneln und man misst
 einen Tunnelstrom. Dieser steigt sehr steil an, da die Zustandsdichte des
 Supraleiters eine Van Hove-Singularität aufweist [cit] (\ref{fig:tunnel} (c) ).
-Die Tunnelstrom- Kennlinien sind in \ref{fig:tunnel} für die verschiedenen
+Die Tunnelstrom- Kennlinien sind in Abb. \ref{fig:tunnel} für die verschiedenen
 Fälle gezeigt. Für $T\neq 0$ ist die Energielücke kleiner als bei $T=0$.
 Außerdem können durch thermische Fluktuationen bereits früher Elektronen in den
-Supraleiter tunneln. Dies führt zu einer Aufweichung der Kennlinie.
+Supraleiter tunneln. Dies führt zu einer Aufweichung der Kennlinie
+(\ref{fig:kennlinie} (c) ).
 
 
-\subsubsection{NL/NL Tunnelkennlinie}
-\subsubsection{NL/SL Tunnelkennlinie}
 \section{Durchführung}
 \label{sec:durchfuehrung}
+
 \section{Auswertung}
 \label{sec:auswertung}
 \section{Diskussion}
