@@ -250,6 +250,14 @@ Supraleiter tunneln. Dies führt zu einer Aufweichung der Kennlinie
 \section{Durchführung}
 \label{sec:durchfuehrung}
 \subsection{Herstellung der Probe}
+\begin{figure}[]
+    \centering
+    \includegraphics[scale=0.5]{fig/aufbau.png}
+    \caption{Versuchsaufbau zur Herstellung der Probe. Oben: Substrathalter und
+        Schwingungsquarzwaagen.
+    Unten: Drehblende [cit].}
+    \label{fig:aufbau}
+\end{figure}
 Zunächst wird die Probe hergestellt. Dazu wird ein SiO$_2$-Wafer verwendet,
 auf den die Tunnekontakte draufgedampft werden. Dieser wird zunächst in die
 Halterung der Vakuumglocke eingespannt. Jetzt muss die Schablone für das
@@ -267,6 +275,12 @@ Quarzes die Masse und mit der Dichte die Schichtdicke. Beim Sputtern wird das
 Argon ionisiert und die Ionen werden mit einer S~annung von bis zu 1\;kV auf
 die Goldfolie beschleunigt. Dadurch werden Goldatome herausgeschlagen, welche
 sich auf dem Substrat ablagern. 
+\begin{figure}[]
+    \centering
+    \includegraphics{fig/magneton.png}
+    \caption{Schema des Magnetons, welches zum Sputtern verwendet wird [cit].}
+    \label{fig:magneton}
+\end{figure}
 Nun muss das Aluminium aufgedampft werden.  Dafür wird das Ag wieder abgesaugt
 und der Probenhalter wird um 180$^\circ$ nach unten gedreht. Die Schablone wird
 in die nächste Stellung gedreht und das Aluminium wird durch einen Wolframdraht
@@ -291,8 +305,20 @@ Als letztes wird die Probe mithilfe eines Mikroskops untersucht. Hierbei ist
 insbesondere darauf zu achten, dass die Kontakte unversehrt sind. In unserem
 Fall waren Einkerbungen höchstens so breit wie 1/3 der Kontaktbreite und
 sollten somit in Ordnung sein.
+\begin{figure}[]
+    \centering
+    \includegraphics{fig/vakuum.png}
+    \caption{Vakuumanlage mit Vorpumpe und Turbopumpe [cit].}
+    \label{fig:vakuum}
+\end{figure}
 
 \subsection{Einbau der Probe und Messung des Tunnelstroms}
+\begin{figure}[]
+    \centering
+    \includegraphics{fig/kryostat.png}
+    \caption{He-Verdampfungskryostat [cit].}
+    \label{fig:kryostat}
+\end{figure}
 Das Substart wird zunächst in die Messsonde eingebaut. Dafür werden die sechs
 Kontakte mit Indiumplättchen mit der Messsonde verbunden. Indium ist ein
 besonders weiches Metall, wodurch ein guter Kontakt mit den Kontakten der Sonde
@@ -327,10 +353,50 @@ die Auswertung eingeht.
 
 \section{Auswertung}
 \label{sec:auswertung}
-
+\subsection{NL/NL-Kennlinie bei Raumtemperatur}
+\begin{figure}[]
+    \centering
+    \includegraphics[width=\textwidth]{fig/1.pdf}
+    \caption{Bei Raumtemperatur gemessene Strom-Spannungskurve.}
+    \label{fig:1}
+\end{figure}
+\subsection{SL/NL-Kennlinien}
+\begin{figure}[]
+    \centering
+    \includegraphics[width=\textwidth]{fig/2.pdf}
+    \caption{Bei Raumtemperatur gemessene Strom-Spannungskurve.}
+    \label{fig:2}
+\end{figure}
+\begin{figure}[]
+    \centering
+    \includegraphics[width=\textwidth]{fig/3.pdf}
+    \caption{Bei Raumtemperatur gemessene Strom-Spannungskurve.}
+    \label{fig:3}
+\end{figure}
+\begin{figure}[]
+    \centering
+    \includegraphics[width=\textwidth]{fig/4.pdf}
+    \caption{Bei Raumtemperatur gemessene Strom-Spannungskurve.}
+    \label{fig:4}
+\end{figure}
 
 
 \section{Diskussion}
+
+\begin{itemize}
+    \item 1:NL/NL kleinere Steigung da Messung bei Raumtemperatur (Steigung 1/R)
+    \item 2:hohere temp aufgeweichter, asymptote steiler, da kleinere temp.
+    \item 3: kleine temp, maximum eindeutig, T=0 wäre unendich hoch
+    \item 3: maximum mehr oder weniger immer an gleicher stelle, deswegen grobe
+        auswertung.
+    \item 3: Keine Fehlerbalken, da der Fehler durch das plateau gegeben
+        anstatt fehler der einzelmessungen
+    \item 4: korrigierten Werte liegen alle näher an BCS-Theorie, sehr große
+        Fehler, kommen durch grobe abschätzung der Maxima. Aber Qualitativ
+        richtig. Verbesserten Werte schneiden alle Theoriekurve.
+    \item korrigierte werte haben weniger im mittel 17\% abweichung,
+        unkorrigierte 31\%.
+\end{itemize}
 
 \clearpage
 
