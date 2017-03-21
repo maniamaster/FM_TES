@@ -353,13 +353,37 @@ die Auswertung eingeht.
 
 \section{Auswertung}
 \label{sec:auswertung}
+Da die Daten, welche während unseres eigenen Versuches aufgenommen wurden,
+keine Sinnvolle Auswertung erlaubten, handelt es sich im folgenden um Altdaten,
+die vom Praktikumsassistenten bereitgestellt wurden.
 \subsection{NL/NL-Kennlinie bei Raumtemperatur}
 \begin{figure}[]
     \centering
-    \includegraphics[width=\textwidth]{fig/1.pdf}
-    \caption{Bei Raumtemperatur gemessene Strom-Spannungskurve.}
+    \include{linfit}
+    \caption{Bei Raumtemperatur gemessene Strom-Spannungskurve (rot). In grün:
+    Linearer fit. Es handelt sich
+    um eine Ohm'sche Kennlinie mit konstanter Leitfähigkeit 
+    $\sigma=(0.07591\pm0.00001)\;\Omega$.}
     \label{fig:1}
 \end{figure}
+Für die bei Raumtemperatur gemessene Stromkennlinie erwartet man eine
+Proportionalitätsgerade nach dem Ohm'schen Gesetz $I=U/R=\sigma U$, wobei
+$\sigma=1/R$ die Leitfähigkeit ist. Um den Widerstand zu
+ermitteln, wird also ein linearer fit mit dem Ansatz $f(U)=\sigma U+b$ durchgeführt. Die Ergebnisse sind in Abb.
+\ref{fig:1} zu sehen. Für die Fitgrößen ergeben sich:
+\begin{align}
+    \sigma&=(0.07591\pm0.00001)\;\Omega\\
+    b&=(-5.717\times10^{-6}\pm0.03\times10^{-6})\;\text{A}
+    \label{eq:linfit}
+\end{align}
+Hieraus ergibt sich der Widerstand zu $R=(13.173\pm0.002)\;\Omega$, wobei die
+Gauß'sche Fehlerfortpflanzungsformel verwendet wurde. Da die Fehler der
+Messwerte, welche
+symmetrisch sind,
+hier keine Auswirkungen auf den fit haben und zudem sehr klein sind
+($\sigma_A=0.1$\;mA), wurden sie nicht in die Grafik mit eingetragen.
+
+
 \subsection{SL/NL-Kennlinien}
 \begin{figure}[]
     \centering
@@ -367,6 +391,39 @@ die Auswertung eingeht.
     \caption{Bei Raumtemperatur gemessene Strom-Spannungskurve.}
     \label{fig:2}
 \end{figure}
+In Abb. \ref{fig:2} sind die gemessenen Daten von der SL/NL-Messung bei verschiedenen Temperaturen
+aufgetragen. Wie bereits erwähnt handelt es sich um einen Temperatursweep um
+die gewünschte Temperatur. Es sind deutlich die theoretisch vorhergesagten
+Plateaus zu sehen. Bei sehr geringen Spannungen fließt kaum Strom, da die
+Energielücke $\Delta$ noch nicht überwunden wurde. Um $\Delta$ zu bestimmen,
+werden die Daten numerisch mithilfe des zentralen Differenzenquotienten
+\begin{align}
+    \diff{I_j}{U}\approx\frac{1}{2}\left(\frac{I_{j+1}-I_j}{U_{j+1}-U_{j}}+\frac{I_{j}-I_{j-1}}{U_{j}-U_{j-1}}\right)
+    \label{eq:diffquot}
+\end{align}
+in einem Python-Skript abgeleitet. Die Ergebnisse hiervon sind in Abb.
+\ref{fig:3} zu sehen. Um den Bereich abzuschätzen, ab dem der
+Stromfluss beginnt, wird das Maximum der Ableitung gesucht. Dies ist nötig, da
+für $T\neq0$ die Kennlinien ``aufgeweicht'' sind und kein klarer Sprung zu
+erkennen ist. Als grobe Näherung reicht es jedoch, das maximum der Ableitung
+(= Leitfähigkeit) zu
+betrachten, da sich dieses ungefähr an der Stelle des Sprunges bei $T=0$
+befindet. Die Ableitung oszilliert sehr stark, eine Interpolation ist demnach
+nicht sehr sinnvoll einzusetzen. Für eine grobe Auswertung wird lediglich der
+tatsächliche maximale Wert für die Leitfähigkeit genommen und ein großzügiges
+Fehlerintervall von $\pm$ 1\;mV abgeschätzt. Eine weitere Möglichkeit wäre es,
+das Maximum als Schnittpunkt zweier linearer fits zu ermitteln, aber aufgrund
+der starken Oszillationen wären diese fits stark abhängig von dem
+Fit-Intervall. Es ist also unwahrscheinlich, dass dies zu besseren Ergebnissen
+führt. Da die Fehler hauptsächlich von der Position des Maximums abhängen, sind
+die Messfehler von $\sigma_I=0.1$\;mA ebenfalls vernachlässigbar. Diese sind
+bereits mit dem großzügigen Fehlerintervall für $U$ berücksichtigt. Die Maxima
+werden sowohl bei positiven als auch negativen Spannungen gemessen. Dadurch
+kann man das doppelte Plateau $2\Delta=U_{\text{max,rechts}}-U_{\text{max,links}}$ bestimmen.
+Nach der Gauß'schen Fehlerfortpflanzung ergibt sich
+$\sigma_{2\Delta}=\sqrt{\sigma_{\text{max,links}}^2+\sigma_{\text{max,rechts}}^2}=1.4\;\sigma_{\text{max,links}}$.
+
+
 \begin{figure}[]
     \centering
     \includegraphics[width=\textwidth]{fig/3.pdf}

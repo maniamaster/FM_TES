@@ -14,6 +14,8 @@ import scipy as sp
 import matplotlib as mpl    
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
+from uncertainties.unumpy import tanh
+
 
 from numpy import sqrt, pi, exp, linspace, loadtxt
 from lmfit import  Model
@@ -52,11 +54,10 @@ plt.close('all')
 
 plt.figure(1)
 
+plt.ticklabel_format(axis='y',style='sci',scilimits=(1,4))
 plt.grid(True)
-
-
-plt.xlabel(r"$U [\mathrm{V}]$", fontsize=18)
-plt.ylabel(r"$I [\mathrm{A}]$", fontsize=18)
+plt.xlabel(r"$U [\mathrm{V}]$")
+plt.ylabel(r"$I [\mathrm{A}]$")
 
 
 
@@ -90,7 +91,7 @@ plt.savefig('1.pdf')
 
 
 plt.figure(2)
-
+plt.ticklabel_format(axis='y',style='sci',scilimits=(1,4))
 plt.grid(True)
 
 
@@ -123,7 +124,7 @@ plt.savefig('2.pdf')
 
 
 plt.figure(3)
-
+plt.ticklabel_format(axis='y',style='sci',scilimits=(1,4))
 plt.grid(True)
 
 
@@ -270,8 +271,8 @@ corrected = kor(Uf, Tarr)
 def theo(T):
     c1 = 2.2345*10**(-22)
     TC= 7.193
-    temp1= 1.74*np.sqrt( (TC/T) -1)
-    temp2= np.tanh(temp1)
+    temp1= 1.74*uc.unumpy.sqrt( (TC/T) -1)
+    temp2= tanh(temp1)
     return temp2
 
 TC= 7.193
@@ -296,9 +297,14 @@ plt.ylim(0,2.5)
 plt.grid(True)
 uplot(Tarr/TC, difference/(2.0*kb * 1.76* 7.193),c='b', label='Ohne Kor.')
 uplot(Tarr/TC, corrected/(kb * 1.76* 7.193),c='r' , label='Mit Kor.')
-plt.plot(Trange/TC, theo(Trange)/(kb * 1.76* 7.193*1000), 'g-')
 
-plt.axhline(y=1, color='orange', linestyle='--')
+plt.axhline(y=4.33/(1.76*2), color='m', linestyle='-')
+
+plt.plot(Trange/TC, uc.unumpy.nominal_values(theo(Trange))+uc.unumpy.std_devs(theo(Trange)), 'g-')
+plt.plot(Trange/TC, uc.unumpy.nominal_values(theo(Trange)), 'g-')
+plt.plot(Trange/TC, uc.unumpy.nominal_values(theo(Trange))-uc.unumpy.std_devs(theo(Trange)), 'g-')
+
+plt.axhline(y=1, color='black', linestyle='--')
 
 
 plt.legend()
@@ -306,10 +312,26 @@ plt.legend()
 plt.savefig('4.pdf')
 
 
+liter= ufloat(4.33, 0.1)
+BCS = 1.76
 
 
+difflit1= np.abs(liter-value)/(liter)
 
 
+difflit2= np.abs(liter-(2*corrected)/(kb*TC) )/(liter)
+
+comparison= np.abs( ( theo((Tarr))/(kb * 1.76* 7.193*1000)   - corrected/(kb * 1.76* 7.193))/ (theo(Tarr)/(kb * 1.76* 7.193*1000)))
+
+plt.figure(7)
+plt.xlabel(r"$T/Tc$")
+plt.ylabel(r"Rel. Abw. BCS zu korr. Werten")
+
+
+uplot(Tarr/TC, comparison)
+
+
+plt.grid(True)
 
 
 #for i in range(2,8):

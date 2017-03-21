@@ -2,18 +2,23 @@
 \select@language {ngerman}
 \select@language {ngerman}
 \contentsline {section}{\numberline {1}Einleitung}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Kommentar}{1}{subsection.1.1}
 \contentsline {section}{\numberline {2}Theorie}{1}{section.2}
 \contentsline {subsection}{\numberline {2.1}Grundbegriffe}{1}{subsection.2.1}
 \contentsline {paragraph}{\nonumberline Die Zustandsdichte $D(E)$}{1}{section*.2}
 \contentsline {paragraph}{\nonumberline Die Fermiverteilung $f_{T,\mu }(E)$}{1}{section*.3}
-\contentsline {paragraph}{\nonumberline Besetzungsdichte $\rho $}{1}{section*.4}
-\contentsline {subsection}{\numberline {2.2}Tunneleffekt}{1}{subsection.2.2}
+\contentsline {paragraph}{\nonumberline Besetzungsdichte $\rho $}{2}{section*.4}
+\contentsline {subsection}{\numberline {2.2}Tunneleffekt}{2}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Cooper Paare}{2}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Tunnelkennlinien}{2}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}Tunnelkennlinien}{3}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Vier Punkt Messung}{3}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Ablauf des Versuches}{3}{subsection.2.6}
+\contentsline {section}{\numberline {3}Der Versuch}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Ablauf des Versuches}{4}{subsection.3.1}
 \contentsline {subsubsection}{\nonumberline Herstellung der Probe}{4}{section*.5}
-\contentsline {subsection}{\numberline {2.7}NL-NL Kennlinie}{4}{subsection.2.7}
-\contentsline {subsection}{\numberline {2.8}SL-NL Kennlinie}{4}{subsection.2.8}
-\contentsline {subsection}{\numberline {2.9}Bestimmung der Energiel\IeC {\"u}cke}{5}{subsection.2.9}
-\contentsline {subsection}{\numberline {2.10}BCS-Theory}{5}{subsection.2.10}
+\contentsline {subsection}{\numberline {3.2}Messprozess}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}NL-NL Kennlinie}{5}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}SL-NL Kennlinie}{6}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Bestimmung der Energiel\IeC {\"u}cke}{7}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}BCS-Theory}{10}{subsection.3.6}
+\contentsline {section}{\numberline {4}Diskussion}{10}{section.4}
+\contentsline {section}{\numberline {5}Anhang}{12}{section.5}
