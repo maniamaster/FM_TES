@@ -73,21 +73,42 @@
 
 \section{Einleitung}
 \label{sec:einleitung}
+Supraleiter sind elektrische Leiter, die unterhalb einer bestimmten Temperatur,
+genannt kritische Temperatur, einen Elektrischen Widerstand von Null haben.
+Dies ist von immenser Bedeutung , zum Beispiel für die Herstellung von starken Magnetfeldern
+und verlustfreien Stromleitungen. Aber auch für Grundlagenforschung sind
+Supraleiter relevant. Sie sind das Beispiel eines sogenannten makroskopischen
+Quanteneffektes, bei der alle Elektronen sich im exakt gleichen Quantenzustand
+befinden. Eine Untersuchung von den Eigenschaften der Supraleiter erlaubt also
+Einblicke in die Quantentheorie, insbesondere die Vielteilchendynamik von
+Elektronen und die Gitterdynamik der Festkörper.
+Eine besonders geeignete Herangehensweise für die Untersuchung von Supraleitern
+ist die Ausnutzung des Tunneleffektes, ein weiterer quantenmechanischer Effekt.
+Durch ihn lassen sich direkt eine Vielzahl an qualitativen und quantitativen
+Eigenschaften von Supraleitern erschließen, insbesondere die Zustandsdichte
+(siehe Unten).\\
+In diesem Versuch soll zunächst ein Aluminium-Aluminiumoxid-Blei Tunnelkontakt
+hergestellt und anschließend auf Supraleitung untersucht werden. Dabei werden
+außerdem eine grundlegende experimentelle Methode der Tieftemperaturphysik,
+nämlich das Abkühlen der Messsonde auf wenige Grad Kelvin geübt.
+Die gemessenen Daten werden anschließend auf qualitative und quantitative Art
+und Weise mit Literaturwerten und der einfachsten Theorie für Supraleiter, der
+BCS-Theorie, verglichen.
 \section{Theorie}
 \label{sec:theorie}
 \subsection{Grundlagen: Zustandsdichte, Fermiverteilung, Besetzungsdichte}
 Die Zustandsdichte $D(E)$ gibt die Anzahl der erlaubten Mikrozustände pro
 Energieintervall $\d E$ an. Sie ist für kontinuierliche Energien allgemein
 definiert durch $D(E):=\int \frac{\d^d k}{(2
-\pi)^d}\delta\left(E-E(\vec{k})\right)$ [cit],
+\pi)^d}\delta\left(E-E(\vec{k})\right)$ \cite{hunklingerfk},
 wobei $\vec k$ die Wellenzahl und $d$ die Dimension (für unseren Fall 3) ist.
 $E(\vec k)$ ist die Dispersionsrelation der Teilchen.
-Für freie Elektronen ergibt sich [cit]:
+Für freie Elektronen ergibt sich [S.\;267]\cite{hunklingerfk}:
 \begin{equation}
     \label{eq:freielek}
    D_N(E_{\vec{k}})=\frac{\left(2m^*\right)^\frac{3}{2}}{2\pi ^2\hbar ^3}\sqrt{E}, 
 \end{equation}
-wobei $m^*$ die sog. effektive Masse der Elektronen ist. Diese ist für freie
+wobei $m^*$ die sogenannte effektive Masse der Elektronen ist. Diese ist für freie
 Elektronen gleich ihrer tatsächlichen Masse, berücksichtigt bei einem
 Festkörper aber zusätzlich den Einfluss des Kristallpotentials.
 
@@ -95,7 +116,7 @@ Die Fermi-Dirac Verteilung gibt die mittlere thermische Energiebesetzung von Spi
 Teilchen in Abhängigkeit der Temperatur $T$ und des chemischen Potentials $\mu$
 an. Sie lautet $f_T(E)=\frac{1}{\exp{\beta(E-\mu)-1}}$, wobei
 $\beta=\frac{1}{k_b T}$ der Boltzmann- Faktor ist. Für $T=0$ ist sie eine
-Stufenfunktion [pic]: Unterhalb der sog. Fermienergie $E_F=\mu$ sind alle
+Stufenfunktion: Unterhalb der sogenannten Fermienergie $E_F=\mu$ sind alle
 Zustände mit Wahrscheinlichkeit 1 besetzt, während alle oberhalb von $E_F$
 unbesetzt sind. Dies bezeichnet man als ``Fermikante''.
 
@@ -107,12 +128,12 @@ systemunabhängigen Thermodynamik in $f_T(E)$.
 
 \subsection{Tunneleffekt}
 Der Tunneleffekt ist ein quantenmechanischer Effekt, bei dem ein Teilchen eine
-Potentialbarriere endlicher Höhe und breite durchqueren kann, obwohl sie höher
+Potentialbarriere endlicher Höhe und Breite durchqueren kann, obwohl sie höher
 als die Energie des Teilchens ist. Dies kommt dadurch zustande, dass die
 Wellenfunktion jenseits der Barriere verschieden von Null ist. 
 Durch Lösen der Schrödingergleichung mit einer Kastenbarriere erhält man,
 dass die Tunnelwahrscheinlichkeit exponentiell mit der Breite $d$ der Barriere
-abfällt: [cit]
+abfällt: \cite{giaever1961study}
 \begin{align}
     \label{eq:tunnelamp}
     A_\text{tunnel}\propto e^{-\sqrt{(2m/\hbar^2 (V_0-E)}}e^{-d}.
@@ -162,7 +183,7 @@ sind, so gilt nach dem Austausch des Phonons
 der Gesamtimpuls $\vec K=\vec k_1 + \vec k_2$ bleibt also erhalten.
 Aufgrund der Fermiverteilung sind für die Elektronen nur Energien oberhalb der
 Fermikante zugänglich. Approximiert man die Phononenfrequenz mit der
-Debyefrequenz $\omega_D$ [cit], so liegen die freien Zustände innerhalb der
+Debyefrequenz $\omega_D$ \cite[S\;211\;ff.]{hunklingerfk}, so liegen die freien Zustände innerhalb der
 Energieschale $[E_F,E_F+\hbar \omega_D]$ oder äquivalent im k-Raum innerhalb
 der Schale mit Dicke $\frac{m\omega_D}{\hbar k_F}$, wobei $k_F$ der
 Fermiwellenvektor ist. Für beide Elektronen sind diese Schalen in Abb.
@@ -202,7 +223,7 @@ Zustandsdichte von Supraleitern $D_S(E_{\vec{k}})$ in Abhängigkeit der Energiel
 $\eta_{\vec k}$ ist die kinetische Energie der Elektronen gemessen von der
 Fermienergie. Die Quasiteilchen verhalten sich je nach kinetischer Energie wie
 Löcher, Elektronen oder Mischzustände. Für $T=T_c$ ist die kinetische Energie
-der Cooper-Paare genug, um diese aufzubrechen und der Supraleiter geht in den
+der Cooper-Paare groß genug, um diese aufzubrechen und der Supraleiter geht in den
 normalleitenden Zustand ohne Energielücke über.
 
 \subsection{Tunnelkennlinien von Normalleitern und Supraleitern}
@@ -239,7 +260,7 @@ keine freien Zustände unterhalb $E_F$ vorhanden sind (\ref{fig:tunnel} (b) ). E
 \end{figure}
 von $U=\Delta/e$ können Elektronen in den Supraleiter Tunneln und man misst
 einen Tunnelstrom. Dieser steigt sehr steil an, da die Zustandsdichte des
-Supraleiters eine Van Hove-Singularität aufweist [cit] (\ref{fig:tunnel} (c) ).
+Supraleiters eine Van Hove-Singularität aufweist \cite[S\;209]{hunklingerfk} (\ref{fig:tunnel} (c) ).
 Die Tunnelstrom- Kennlinien sind in Abb. \ref{fig:tunnel} für die verschiedenen
 Fälle gezeigt. Für $T\neq 0$ ist die Energielücke kleiner als bei $T=0$.
 Außerdem können durch thermische Fluktuationen bereits früher Elektronen in den
@@ -255,39 +276,40 @@ Supraleiter tunneln. Dies führt zu einer Aufweichung der Kennlinie
     \includegraphics[scale=0.5]{fig/aufbau.png}
     \caption{Versuchsaufbau zur Herstellung der Probe. Oben: Substrathalter und
         Schwingungsquarzwaagen.
-    Unten: Drehblende [cit].}
+        Unten: Drehblende \cite{fprakt}.}
     \label{fig:aufbau}
 \end{figure}
 Zunächst wird die Probe hergestellt. Dazu wird ein SiO$_2$-Wafer verwendet,
 auf den die Tunnekontakte draufgedampft werden. Dieser wird zunächst in die
 Halterung der Vakuumglocke eingespannt. Jetzt muss die Schablone für das
 Aufdampfen montiert werden, wobei auf die korrekte Orientierung zu achten ist.
-Desweiteren muss die gesamte Gestell nach oben gedreht werden, da zuerst
+Desweiteren muss das gesamte Gestell nach oben gedreht werden, da zuerst
 gesputtert wird.
 Ist alles festgeschraubt, folgt nun die Evakuierung der Glocke, indem zuerst
 die Vorpumpe benutzt wird und anschließend mit der
 Turbopumpe ein Vakuum von ca. $2\times10^{-5}\;$mbar erzeugt wird.
-Zum Sputtern muss die Glocke mit ca. 10$^{-2}$\;bar gefüllt werden.
+Zum Sputtern muss die Glocke mit ca. 10$^{-2}$\;bar Argon gefüllt werden.
 Nun wird eine ca. 100\;nm dicke Goldschicht auf das Substrat gesputtert. Die
 Dicke wird dabei durch eine Schwingungsquarzwaage aufgenommen. Die Anlage
 berechnet automatisch durch die sich verändernde Schwingungsfrequenz des
 Quarzes die Masse und mit der Dichte die Schichtdicke. Beim Sputtern wird das
-Argon ionisiert und die Ionen werden mit einer S~annung von bis zu 1\;kV auf
+Argon ionisiert und die Ionen werden mit einer Spannung von bis zu 1\;kV auf
 die Goldfolie beschleunigt. Dadurch werden Goldatome herausgeschlagen, welche
 sich auf dem Substrat ablagern. 
 \begin{figure}[]
     \centering
     \includegraphics{fig/magneton.png}
-    \caption{Schema des Magnetons, welches zum Sputtern verwendet wird [cit].}
+    \caption{Schema des Magnetons, welches zum Sputtern verwendet wird
+    \cite{fprakt}.}
     \label{fig:magneton}
 \end{figure}
 Nun muss das Aluminium aufgedampft werden.  Dafür wird das Ag wieder abgesaugt
 und der Probenhalter wird um 180$^\circ$ nach unten gedreht. Die Schablone wird
 in die nächste Stellung gedreht und das Aluminium wird durch einen Wolframdraht
-erhitzt. Wolfram wird deswegen gewählt, weil er eine besonders hohe
+erhitzt. Wolfram wird deswegen gewählt, weil es eine besonders hohe
 Schmelztemperatur besitzt. Es muss zunächst langsam erhitzt werden, da die
 Oxidschicht des Aluminiums zuerst weggedampft werden soll. Während dieses
-Vorwärmens muss die Schutztblende über der Probe sein, damit sie kein
+Vorwärmens muss die Schutzblende über der Probe positioniert sein, damit sie kein
 Aluminiumoxid abbekommt. Wenn das Aluminium geschmolzen ist, kann die Scheibe
 entfernt werden und der Aufdampfvorgang beginnt. Vorher muss die
 Schwingungsquarzwaage wissen, dass nun Aluminium verwendet wird.
@@ -298,7 +320,7 @@ Luft eingelassen, sodass das Aluminium oberflächlich oxidiert. Die genaue
 Luftmenge und die Belüftungszeit liegen als Rezept im Labor vor.
 Nach der Oxidation wird wieder ein Vakuum erzeugt. Jetzt kann als letzter
 Schritt das Blei aufgedampft werden. Dafür wird wieder zunächst die Blende
-weitergedreht und anschließend das Blei verdampft. Es soll eine Schichtdicke
+weiter gedreht und anschließend das Blei verdampft. Es soll eine Schichtdicke
 von ca. 300\;nm aufgedampft werden.
 
 Als letztes wird die Probe mithilfe eines Mikroskops untersucht. Hierbei ist
@@ -308,18 +330,12 @@ sollten somit in Ordnung sein.
 \begin{figure}[]
     \centering
     \includegraphics{fig/vakuum.png}
-    \caption{Vakuumanlage mit Vorpumpe und Turbopumpe [cit].}
+    \caption{Vakuumanlage mit Vorpumpe und Turbopumpe \cite{fprakt}.}
     \label{fig:vakuum}
 \end{figure}
 
 \subsection{Einbau der Probe und Messung des Tunnelstroms}
-\begin{figure}[]
-    \centering
-    \includegraphics{fig/kryostat.png}
-    \caption{He-Verdampfungskryostat [cit].}
-    \label{fig:kryostat}
-\end{figure}
-Das Substart wird zunächst in die Messsonde eingebaut. Dafür werden die sechs
+Das Substrat wird zunächst in die Messsonde eingebaut. Dafür werden die sechs
 Kontakte mit Indiumplättchen mit der Messsonde verbunden. Indium ist ein
 besonders weiches Metall, wodurch ein guter Kontakt mit den Kontakten der Sonde
 sichergestellt wird. Jetzt sollten die Kontakte mit einem Amperemeter vermessen
@@ -330,21 +346,22 @@ die Messung des Tunnelstroms bei Zimmertemperatur durchgeführt. Sowohl Blei als
 auch Aluminium sind also Normalleiter. Die Messung geschieht automatisch am
 Computer. Hierbei wird eine sogenannte Vierpunktmessung verwendet. Diese
 eliminiert den Leitungs- und den Kontaktwiderstand und ist dadurch besonders
-geiignet für kleine Tunneströme.
-Mit Origin können die gemessenen werte direkt angezeigt werden.
+geeignet für kleine Tunnelströme.
+Mit Origin können die gemessenen Werte direkt angezeigt werden.
 Bereits hier hat sich gezeigt, dass unsere Messwerte für die Spannung
 ungefähr um 2 Größenordnungen zu hoch sind.
 Nun wird das He-Verdampfungskryostat für die SL/NL-Messung vorbereitet. Dazu wird zunächst mit einer Vakuumpumpe das doppelwandige Gefäß evakuiert. Anschließend wird flüssiger
 Stickstoff in die Außenwände gefüllt. Dieses kühlt das Gefäß vor und dient als
 zusätzlicher Wärmeisolator für das flüssige Helium. Mit dem flüssigen Helium
 wird die Probe auf $4.2$\;K heruntergekühlt. Bei dieser Temperatur ist das Blei
-bereits supraleitend. Bei dieser Temperatur wird die erste Tunnelkennlinie
+bereits supraleitend. Nun wird die erste Tunnelkennlinie
 aufgenommen. Auch hier haben unsere Messungen grundsätzlich falsche Ergebnisse
-geliefert. Um die Temperaturabhängigkeit der Kennlinien zu untersuchen wird als
+geliefert. Es war keine charakteristische Tunnelkennlinie zu beobachten. \\
+Um die Temperaturabhängigkeit der Kennlinien zu untersuchen wird als
 letztes der Dampfdruck erniedrigt, wodurch Temperaturen bis zu 1.5\;K erreicht
-werden. Hier könnten sich bereits erste Supraleitende eigenschaften des
+werden. Hier könnten sich eventuell bereits erste Supraleitende Eigenschaften des
 Aluminiums herauszeichnen. Da der Druck kontinuierlich erniedrigt wird, sind
-die hier gemessenen Kennlinien in wahrheit temperaturabhängig. Es wird also ein
+die hier gemessenen Kennlinien in Wahrheit temperaturabhängig. Es wird also ein
 Temperatursweep durchgeführt: Kurz vor der gewünschten Temperatur wird die
 Messung gestartet. Diese dauert dann 30 Sekunden. Währenddessen sinkt der Druck
 weiter. Aus der Dampfdruckkurve von Helium, welche am Kryostat vermerkt ist,
@@ -354,7 +371,7 @@ die Auswertung eingeht.
 \section{Auswertung}
 \label{sec:auswertung}
 Da die Daten, welche während unseres eigenen Versuches aufgenommen wurden,
-keine Sinnvolle Auswertung erlaubten, handelt es sich im folgenden um Altdaten,
+keine sinnvolle Auswertung erlaubten, handelt es sich im folgenden um Altdaten,
 die vom Praktikumsassistenten bereitgestellt wurden.
 \subsection{NL/NL-Kennlinie bei Raumtemperatur}
 \begin{figure}[]
@@ -385,10 +402,13 @@ hier keine Auswirkungen auf den fit haben und zudem sehr klein sind
 
 
 \subsection{SL/NL-Kennlinien}
-\begin{figure}[]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{fig/2.pdf}
-    \caption{Bei Raumtemperatur gemessene Strom-Spannungskurve.}
+    \caption{Gemessene Tunnelkennlinien bei unterschiedlichen Temperaturen.
+    Außerdem eingezeichnet ist die Raumtemperaturmessung. Alle qualitativen
+    Eigenschaften von Tunnelkennlinien sind wieder zu erkennen. Außerdem laufen
+    die Supraleitungs-Kennlinien in etwa gegen die Raumtemperaturmessung.}
     \label{fig:2}
 \end{figure}
 In Abb. \ref{fig:2} sind die gemessenen Daten von der SL/NL-Messung bei verschiedenen Temperaturen
@@ -405,15 +425,15 @@ in einem Python-Skript abgeleitet. Die Ergebnisse hiervon sind in Abb.
 \ref{fig:3} zu sehen. Um den Bereich abzuschätzen, ab dem der
 Stromfluss beginnt, wird das Maximum der Ableitung gesucht. Dies ist nötig, da
 für $T\neq0$ die Kennlinien ``aufgeweicht'' sind und kein klarer Sprung zu
-erkennen ist. Als grobe Näherung reicht es jedoch, das maximum der Ableitung
+erkennen ist. Als grobe Näherung reicht es jedoch, das Maximum der Ableitung
 (= Leitfähigkeit) zu
 betrachten, da sich dieses ungefähr an der Stelle des Sprunges bei $T=0$
 befindet. Die Ableitung oszilliert sehr stark, eine Interpolation ist demnach
 nicht sehr sinnvoll einzusetzen. Für eine grobe Auswertung wird lediglich der
 tatsächliche maximale Wert für die Leitfähigkeit genommen und ein großzügiges
 Fehlerintervall von $\pm$ 1\;mV abgeschätzt. Eine weitere Möglichkeit wäre es,
-das Maximum als Schnittpunkt zweier linearer fits zu ermitteln, aber aufgrund
-der starken Oszillationen wären diese fits stark abhängig von dem
+das Maximum als Schnittpunkt zweier linearer Fits zu ermitteln, aber aufgrund
+der starken Oszillationen wären diese Fits stark abhängig von dem
 Fit-Intervall. Es ist also unwahrscheinlich, dass dies zu besseren Ergebnissen
 führt. Da die Fehler hauptsächlich von der Position des Maximums abhängen, sind
 die Messfehler von $\sigma_I=0.1$\;mA ebenfalls vernachlässigbar. Diese sind
@@ -422,38 +442,192 @@ werden sowohl bei positiven als auch negativen Spannungen gemessen. Dadurch
 kann man das doppelte Plateau $2\Delta=U_{\text{max,rechts}}-U_{\text{max,links}}$ bestimmen.
 Nach der Gauß'schen Fehlerfortpflanzung ergibt sich
 $\sigma_{2\Delta}=\sqrt{\sigma_{\text{max,links}}^2+\sigma_{\text{max,rechts}}^2}=1.4\;\sigma_{\text{max,links}}$.
-
-
-\begin{figure}[]
+Die Ergebnisse sind in Tab. \ref{tab:res1} eingetragen.
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{fig/3.pdf}
-    \caption{Bei Raumtemperatur gemessene Strom-Spannungskurve.}
+    \caption{Ableitung des Tunnelstroms nach der Spannung aufgetragen gegen die
+ Spannung. Es sind deutliche Maxima auf beiden Seiten zu sehen. Wie erwartet
+ sind diese bei hohen Temperaturen größer. Auf Fehlerbalken wurde zugunsten
+ Übersicht verzichtet. }
     \label{fig:3}
 \end{figure}
+Nach \cite{pike1971} existiert eine Korrekturformel für die Energielücke, die
+Quasiteilchenanregungen bei endlicher Temperatur berücksichtigt. Sie lautet:
+\begin{align}
+    \label{eq:korrektur}
+    \Delta_K=\left( \left( eU_{\text{max}}-ak_BT \right)^h-\left( bk_BT
+    \right)^h \right)^{\frac{1}{h}}.
+\end{align}
+Für den Fehler ergibt sich nach Gauß'scher Fehlerfortpflanzung
+\begin{align}
+    \label{eq:fehlerkorrektur}
+    \sigma_{\Delta_{K}}(T)&=\sqrt{(e
+    \Delta_{K}(T)^{2h-1}\sigma_{U_{\text{max}}})^2+(ak_BhT^{h-1}
+    \Delta_K(T)^{2h-1}\sigma_T)^2}.
+\end{align}
+Die Parameter sind gegeben durch \cite{pike1971}:
+\begin{align}
+    a=1.113,\quad b=2.107,\quad h=2.138.
+\end{align}
+Es ist zu beachten, dass nun eine explizite Temperaturabhängigkeit vorhanden
+ist. Der Fehler der Temperatur, die durch den Temperatursweep entstehen, kann
+mithilfe der Dampfdruckkurve von Helium abgeschätzt werden. Durch die
+exponentielle Abhängigkeit wird der Fehler bei hohen Temperaturen größer. Als
+grobe Schätzung wird der Fehler linear interpoliert. Die Ergebnisse sind
+in Tab. \ref{tab:res1} zu sehen.
+Die kritische Temperatur von Blei ist $T_{C,Pb}=7.2K$ \cite{fprakt}.
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        &\multicolumn{2}{|c|}{Ohne Korrektur}&\multicolumn{2}{|c|}{Mit
+        Korrektur}\\\hline
+        Temperatur $T [K]$&$2\Delta(T)$
+        $[mV]$&$2\Delta(T)/(k_BT_C)$&$2\Delta(T)$
+        $[mV]$&$2\Delta(T)/(k_BT_C)$\\\hline
+        $1.50\pm0.08$&$3.5\pm1.4$&$5.6\pm2.3$&$1.6\pm1.0$&$5.0\pm3.3$\\\hline
+        $2.00\pm0.10$&$3.0\pm1.4$&$4.8\pm2.3$&$1.2\pm1.1$&$3.8\pm3.5$\\\hline
+        $2.50\pm0.13$&$3.4\pm1.4$&$5.4\pm2.3$&$1.4\pm1.4$&$4.4\pm3.5$\\\hline
+        $3.00\pm0.15$&$4.0\pm1.4$&$6.5\pm2.3$&$1.7\pm1.1$&$5.3\pm3.5$\\\hline
+        $3.50\pm0.18$&$3.5\pm1.4$&$5.6\pm2.3$&$1.1\pm1.2$&$3.6\pm4.1$\\\hline
+        $4.20\pm0.21$&$3.9\pm1.4$&$6.3\pm2.3$&$0.9\pm1.6$&$2.8\pm5.3$\\\hline\hline
+        \multicolumn{4}{|c|}{$\text{Literaturwert: }
+        2\Delta_{\text{Pb}}(T=1K)/(k_BT_{C,Pb})$}&$4.33\pm0.10$
+        \cite{giaever1961study}\\\hline
+
+    \end{tabular}
+    \caption{Ergebnisse für die Energielücke $\Delta$ in mV und in
+    dimensionslosen Größen, mit und ohne Korrektur.}
+    \label{tab:res1}
+\end{table}
+
+\subsection{Vergleich mit der BCS-Theorie}
+Mithilfe der BCS-Theorie lässt sich ein Ausdruck für die Energielücke $\Delta$,
+die Zustandsdichte $D(E_F)$ bei der Fermienergie sowie die Temperatur $T$
+finden. Dies ist ausführlich \zB in \cite{enss2011tieftemperaturphysik}
+beschrieben. Man erhält folgende Integraldarstellung:
+\begin{align}
+    \label{eq:bcsint}
+    \frac{2}{D(E_F)\nu_0}=\int_0^{\hbar \omega_D}\frac{\d
+    \eta}{\sqrt{\eta^2+\Delta^2}}\left[
+    \tanh\left({\frac{\sqrt{\eta^2+\Delta^2}}{2k_BT}}\right) \right].
+\end{align}
+$\nu_0$ ist dabei ein Parameter der anziehenden Wechselwirkung durch Phononen.
+Anstatt diesen Ausdruck numerisch zu Integrieren, wird eine Näherungsformel
+verwendet \cite{senapati2011spin}:
+\begin{align}
+    \label{eq:bcsnäherung}
+    \Delta(T)&\approx\Delta_0\tanh\left(k\sqrt{\frac{T_C-T}{T}}\right),\\
+    k&\approx1.74.
+\end{align}
+Eine wichtige Größe für den Vergleich mit realen Supraleitern ist die
+Energielücke bei $T=0$: $\Delta_0=1.76k_BT_C$.
+Die zuvor errechneten Werte für $\Delta$, sowie die nach Gl.
+\ref{eq:bcsnäherung} errechnete Theoriekurve sind in Abb. \ref{fig:4}
+aufgetragen. Desweiteren wird der Literaturwert für Blei aus Tab.
+\ref{tab:res1} als horizontale Linie eingezeichnet.
+
 \begin{figure}[]
     \centering
     \includegraphics[width=\textwidth]{fig/4.pdf}
-    \caption{Bei Raumtemperatur gemessene Strom-Spannungskurve.}
+    \caption{Unkorrigierte und korrigierte Werte der normierten Energielücke in
+    Abhängigkeit von der Temperatur. Außerdem eingezeichnet ist die Vorhersage
+    der BCS-Theorie in grün. In Pink ist der Literaturwert für Blei bei 1 Grad
+    Kelvin eingezeichnet.}
     \label{fig:4}
 \end{figure}
 
 
 \section{Diskussion}
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        &\multicolumn{2}{|c|}{Ohne Korrektur}&\multicolumn{2}{|c|}{Mit
+        Korrektur}\\\hline
+        Temperatur $T [K]$&$2\Delta(T)/(k_BT_C)$&$\text{rel. Abw. zum
+        Lit. Wert}$&$2\Delta(T)/(k_BT_C)$&$\text{rel. Abw. zum
+        Lit. Wert}$\\\hline
+        $1.50\pm0.08$&$5.6\pm2.3$&$0.29$&$5.0\pm3.3$&$0.15$\\\hline
+        $2.00\pm0.10$&$4.8\pm2.3$&$0.11$&$3.8\pm3.5$&$0.12$\\\hline
+        $2.50\pm0.13$&$5.4\pm2.3$&$0.25$&$4.4\pm3.5$&$0.02$\\\hline
+        $3.00\pm0.15$&$6.5\pm2.3$&$0.50$&$5.3\pm3.5$&$0.22$\\\hline
+        $3.50\pm0.18$&$5.6\pm2.3$&$0.29$&$3.6\pm4.1$&$0.17$\\\hline
+        $4.20\pm0.21$&$6.3\pm2.3$&$0.45$&$2.8\pm5.3$&$0.35$\\\hline\hline
+        \multicolumn{4}{|c|}{$\text{Literaturwert: }
+        2\Delta_{\text{Pb}}(T=1K)/(k_BT_{C,Pb})$}&$4.33\pm0.10$
+        \cite{giaever1961study}\\\hline
 
-\begin{itemize}
-    \item 1:NL/NL kleinere Steigung da Messung bei Raumtemperatur (Steigung 1/R)
-    \item 2:hohere temp aufgeweichter, asymptote steiler, da kleinere temp.
-    \item 3: kleine temp, maximum eindeutig, T=0 wäre unendich hoch
-    \item 3: maximum mehr oder weniger immer an gleicher stelle, deswegen grobe
-        auswertung.
-    \item 3: Keine Fehlerbalken, da der Fehler durch das plateau gegeben
-        anstatt fehler der einzelmessungen
-    \item 4: korrigierten Werte liegen alle näher an BCS-Theorie, sehr große
-        Fehler, kommen durch grobe abschätzung der Maxima. Aber Qualitativ
-        richtig. Verbesserten Werte schneiden alle Theoriekurve.
-    \item korrigierte werte haben weniger im mittel 17\% abweichung,
-        unkorrigierte 31\%.
-\end{itemize}
+    \end{tabular}
+    \caption{Ergebnisse für die Energielücke $\Delta$ in mV und in
+    dimensionslosen Größen, mit und ohne Korrektur.}
+    \label{tab:res2}
+\end{table}
+
+\subsection{NL/NL - Messung}
+Wie bereits in der Auswertungssektion beschrieben, sind die Daten der
+Normalleiter-Normalleiter Kennlinie in sehr guter Übereinstimmung mit der
+Theorie. Es zeigt sich deutlich die Ohm'sche Strom-Spannungskurve. Der
+errechnete Widerstandswert ist ebenfalls glaubwürdig, da sich die Kennlinien der
+SL/NL-Messungen nahezu asymptotisch an NL/NL-Kennlinie anschmiegen. Die hier zu
+sehende Diskrepanz ist am wahrscheinlichsten auf die unterschiedliche
+Temperatur der beiden Messungen zurückzuführen. So muss bei einem Ohm'schen
+Leiter ein Temperaturkoeffizient berücksichtigt werden, der den Widerstand bei
+hohen Temperaturen erhöht. Dies ist konsistent zu der kleineren Steigung, also
+der geringeren Leitfähigkeit in Abb. \ref{fig:2}, im Vergleich zu den
+Supraleitungs-Messungen. 
+Da sehr viele Messdaten zu verfügung standen, ist der lineare Fit sehr genau,
+was zu einem sehr genauen Ergebnis führt. Dies ist also ein guter Anhaltspunkt
+zur qualitativen Überprüfung der SL/NL-Messungen.
+
+\subsection{SL/NL - Messung}
+Die in Abb. \ref{fig:2} zu sehenden Kennlinien erfüllen alle qualitativen
+theoretischen Vorhersagen. Zum einen erkennt man das charakteristische Plateau
+bei geringen Spannungen, bei der kein Tunnelstrom fließt. Desweiteren werden
+die Kennlinien aufgeweichter, je höher die Temperatur ist. In Abb.
+\ref{fig:3} kann man demnach deutlich erkennen, dass bei niedrigeren
+Temperaturen das Maximum der Steigung deutlicher zu erkennen ist. Dieses sollte
+theoretisch unendlich sein bei $T=0$. Trotz der höheren maxima bei kleinen
+Temperaturen war es schwer, den Punkt des Maximas genau zu bestimmen, aufgrund
+der Oszillationen in der numerischen Ableitung. Auch eine zweite numerische
+Ableitung hätte demnach nur ein grobes Intervall für den maximalen
+Spannungswert geliefert. Es ist möglich, dass eine beidseitige Annährung mit
+linearen Fits hier geholfen hätte, obwohl diese - wie bereits erwähnt-
+ebenfalls Abhängig von der Fitregion ist. Im Allgemeinen lässt sich sagen, dass
+unsere Fehlerabschätzung etwas zu großzügig geworden ist. Dies ist deutlich in
+Abb. \ref{fig:4} zu sehen. Die Fehlerbalken sind sowohl bei den korrigierten
+Werten, als auch bei den unkorrigierten sehr groß, wobei die
+Temperaturabhängigkeit die Fehler der korrigierten Werte nochmals vergrößert.
+Der Fehler kommt hier fast ausschließlich durch die Abschätzung des Intervalls
+maximaler Spannung. Aufgrund dessen und zugunsten der Übersichtlichkeit wurde auf
+Fehlerbalken in den Plots zuvor verzichtet.
+Während die Werte ohne Korrektur nicht im ersten Signifikanzintervall die
+Literaturkurve der BCS-Theorie schneiden, ist dies für alle korrigierten Werte
+der Fall. Aber auch für die korrigierten Werte ist dies nicht unbedingt zu
+erwarten, da es sich bei Blei um einen Supraleiter mit starker Phononenkopplung
+handelt. Die BCS-Theorie ist aber eine Theorie für geringe Phononenkopplung,
+eine Voraussetzung die für Blei nicht gegeben ist. Man muss demnach die
+einfache BCS Theorie erweitern, um einen genaueren theoretischen Vergleich mit Blei
+herzustellen. Dennoch sind vor allem die korrigierten Werte sehr nahe an der
+BCS-Kurve, besonders für hohe Temperaturen. Dies wird bei vielen Versuchen auch
+bestätigt \cite{enss2011tieftemperaturphysik}. Die zusätzliche Korrektur zur BCS-Theorie
+ist also immer noch relativ gering. Im Vergleich zu dem Literaturwert der dimensionslosen
+Energielücke in Tab. \ref{tab:res2} sieht man allgemein, dass die korrigierten
+Werte eine mit durchschnittlich 17\% insgesamt niedrigere Abweichung ergeben,
+als die unkorrigierten mit einer durchschnittlichen relativen Abweichung von
+31\%. Jedoch ist der Theoriewert
+bei $T=1$\;K gegeben und man erwartet die beste Übereinstimmung für den
+Messwert bei $T=1.5$\;K. Dies ist jedoch hier nicht der Fall. Dennoch schneiden
+die Fehlerbalken aller Werte, mit und ohne Korrektur, diesen Theoriewert.
+Demnach ist die Messung insgesamt als gelungen einzustufen. Es wurden alle
+qualitativen Aussagen der Theorie bestätigt und quantitativ ergeben die Werte,
+wenigstens von der Größenordnung her, eine gute Übereinstimmung zur Theorie.
+
+
+
+
 
 \clearpage
 
