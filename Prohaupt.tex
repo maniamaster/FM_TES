@@ -443,6 +443,30 @@ kann man das doppelte Plateau $2\Delta=U_{\text{max,rechts}}-U_{\text{max,links}
 Nach der Gauß'schen Fehlerfortpflanzung ergibt sich
 $\sigma_{2\Delta}=\sqrt{\sigma_{\text{max,links}}^2+\sigma_{\text{max,rechts}}^2}=1.4\;\sigma_{\text{max,links}}$.
 Die Ergebnisse sind in Tab. \ref{tab:res1} eingetragen.
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        &\multicolumn{2}{|c|}{Ohne Korrektur}&\multicolumn{2}{|c|}{Mit
+        Korrektur}\\\hline
+        Temperatur $T [K]$&$2\Delta(T)$
+        $[mV]$&$2\Delta(T)/(k_BT_C)$&$2\Delta(T)$
+        $[mV]$&$2\Delta(T)/(k_BT_C)$\\\hline
+        $1.50\pm0.08$&$3.5\pm1.4$&$5.6\pm2.3$&$1.6\pm1.0$&$5.0\pm3.3$\\\hline
+        $2.00\pm0.10$&$3.0\pm1.4$&$4.8\pm2.3$&$1.2\pm1.1$&$3.8\pm3.5$\\\hline
+        $2.50\pm0.13$&$3.4\pm1.4$&$5.4\pm2.3$&$1.4\pm1.4$&$4.4\pm3.5$\\\hline
+        $3.00\pm0.15$&$4.0\pm1.4$&$6.5\pm2.3$&$1.7\pm1.1$&$5.3\pm3.5$\\\hline
+        $3.50\pm0.18$&$3.5\pm1.4$&$5.6\pm2.3$&$1.1\pm1.2$&$3.6\pm4.1$\\\hline
+        $4.20\pm0.21$&$3.9\pm1.4$&$6.3\pm2.3$&$0.9\pm1.6$&$2.8\pm5.3$\\\hline\hline
+        \multicolumn{4}{|c|}{$\text{Literaturwert: }
+        2\Delta_{\text{Pb}}(T=1K)/(k_BT_{C,Pb})$}&$4.33\pm0.10$
+        \cite{giaever1961study}\\\hline
+
+    \end{tabular}
+    \caption{Ergebnisse für die Energielücke $\Delta$ in mV und in
+    dimensionslosen Größen, mit und ohne Korrektur.}
+    \label{tab:res1}
+\end{table}
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{fig/3.pdf}
@@ -473,35 +497,14 @@ Die Parameter sind gegeben durch \cite{pike1971}:
 Es ist zu beachten, dass nun eine explizite Temperaturabhängigkeit vorhanden
 ist. Der Fehler der Temperatur, die durch den Temperatursweep entstehen, kann
 mithilfe der Dampfdruckkurve von Helium abgeschätzt werden. Durch die
-exponentielle Abhängigkeit wird der Fehler bei hohen Temperaturen größer. Als
-grobe Schätzung wird der Fehler linear interpoliert. Die Ergebnisse sind
+exponentielle Abhängigkeit wird der Fehler bei hohen Temperaturen größer.
+Allerdings wirkt diesem Effekt entgegen, dass bei niedrigen Drücken der Druck
+langsamer verringert wird. Als
+grobe Schätzung wird der Fehler linear interpoliert, mit größeren Fehlern für
+höhere Temperaturen. Die Ergebnisse sind
 in Tab. \ref{tab:res1} zu sehen.
 Die kritische Temperatur von Blei ist $T_{C,Pb}=7.2K$ \cite{fprakt}.
 
-\begin{table}[]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|}
-        \hline
-        &\multicolumn{2}{|c|}{Ohne Korrektur}&\multicolumn{2}{|c|}{Mit
-        Korrektur}\\\hline
-        Temperatur $T [K]$&$2\Delta(T)$
-        $[mV]$&$2\Delta(T)/(k_BT_C)$&$2\Delta(T)$
-        $[mV]$&$2\Delta(T)/(k_BT_C)$\\\hline
-        $1.50\pm0.08$&$3.5\pm1.4$&$5.6\pm2.3$&$1.6\pm1.0$&$5.0\pm3.3$\\\hline
-        $2.00\pm0.10$&$3.0\pm1.4$&$4.8\pm2.3$&$1.2\pm1.1$&$3.8\pm3.5$\\\hline
-        $2.50\pm0.13$&$3.4\pm1.4$&$5.4\pm2.3$&$1.4\pm1.4$&$4.4\pm3.5$\\\hline
-        $3.00\pm0.15$&$4.0\pm1.4$&$6.5\pm2.3$&$1.7\pm1.1$&$5.3\pm3.5$\\\hline
-        $3.50\pm0.18$&$3.5\pm1.4$&$5.6\pm2.3$&$1.1\pm1.2$&$3.6\pm4.1$\\\hline
-        $4.20\pm0.21$&$3.9\pm1.4$&$6.3\pm2.3$&$0.9\pm1.6$&$2.8\pm5.3$\\\hline\hline
-        \multicolumn{4}{|c|}{$\text{Literaturwert: }
-        2\Delta_{\text{Pb}}(T=1K)/(k_BT_{C,Pb})$}&$4.33\pm0.10$
-        \cite{giaever1961study}\\\hline
-
-    \end{tabular}
-    \caption{Ergebnisse für die Energielücke $\Delta$ in mV und in
-    dimensionslosen Größen, mit und ohne Korrektur.}
-    \label{tab:res1}
-\end{table}
 
 \subsection{Vergleich mit der BCS-Theorie}
 Mithilfe der BCS-Theorie lässt sich ein Ausdruck für die Energielücke $\Delta$,
@@ -538,10 +541,11 @@ aufgetragen. Desweiteren wird der Literaturwert für Blei aus Tab.
     Kelvin eingezeichnet.}
     \label{fig:4}
 \end{figure}
+\newpage
 
 
 \section{Diskussion}
-\begin{table}
+\begin{table}[!h]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
         \hline
@@ -562,7 +566,8 @@ aufgetragen. Desweiteren wird der Literaturwert für Blei aus Tab.
 
     \end{tabular}
     \caption{Ergebnisse für die Energielücke $\Delta$ in mV und in
-    dimensionslosen Größen, mit und ohne Korrektur.}
+    dimensionslosen Größen, mit und ohne Korrektur, sowie die relative
+    Abweichung zum Literaturwert.}
     \label{tab:res2}
 \end{table}
 
